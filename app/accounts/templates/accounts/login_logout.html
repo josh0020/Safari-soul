@@ -1,0 +1,13 @@
+<!-- safari/templates/safari_home.html -->
+{% extends 'base.html' %}
+
+{% block title %}Safari - Test{% endblock %}
+
+{% block content %}
+    <h2>Login</h2>
+    <form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+    </form>
+{% endblock %}
